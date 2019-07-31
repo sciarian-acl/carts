@@ -97,12 +97,11 @@ String VU = ctx.getThreadGroup().getName() + ctx.getThreadNum();
 String headerValue = &quot;LSN=&quot;+ LSN + &quot;;TSN=&quot; + TSN + &quot;;LTN=&quot; + LTN + &quot;;VU=&quot; + VU + &quot;;&quot;;
             
 // -------------------------------------------
-// Set header - allows dynatrace to find this easier, helps with appmon.
+// Set header
 // -------------------------------------------
 HeaderManager hm = sampler.getHeaderManager();
 hm.removeHeaderNamed(&quot;x-dynatrace-test&quot;);
-hm.add(new org.apache.jmeter.protocol.http.control.Header(&quot;x-dynatrace-test&quot;, headerValue));  
- 
+hm.add(new org.apache.jmeter.protocol.http.control.Header(&quot;x-dynatrace-test&quot;, headerValue));
           </stringProp>
         </BeanShellPreProcessor>
         <hashTree/>
